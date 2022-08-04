@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { MainComponent } from './main/main.component';
-import { LeftMenuComponent } from './left-menu/left-menu.component';
-import { TopMenuComponent } from './top-menu/top-menu.component';
+import { AppComponent } from './app.component';
 import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { HomeComponent } from './home/home.component';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
+import { MainComponent } from './main/main.component';
+import { PostsComponent } from './posts/posts.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +19,15 @@ import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
     MainComponent,
     LeftMenuComponent,
     TopMenuComponent,
-    BottomMenuComponent
+    BottomMenuComponent,
+    HomeComponent,
+    PostsComponent,
+    GalleryComponent,
+    ContactUsComponent,
+    NotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
