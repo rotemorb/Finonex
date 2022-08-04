@@ -1,14 +1,9 @@
-<h1>Finonex</h1>
-<nav>
-  <ul>
-    <li><a routerLink="home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
-    <li><a routerLink="posts" routerLinkActive="active" ariaCurrentWhenActive="page">Posts</a>
-    </li>
-    <li><a routerLink="gallery" routerLinkActive="active" ariaCurrentWhenActive="page">Gallery</a>
-    </li>
-    <li><a routerLink="contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a>
-    </li>
-  </ul>
-</nav>
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
+<div>
+  <app-top-menu id="topMenu"></app-top-menu>
+  <app-main id="mainContent">
+  </app-main>
+  <app-left-menu id="leftMenu"></app-left-menu>
+  <app-bottom-menu id="bottomMenu"></app-bottom-menu>
+  <router-outlet></router-outlet>
+  <!-- The routed views render in the <router-outlet>-->
+</div>

@@ -9,9 +9,9 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { MainComponent } from './main/main.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { PostsComponent } from './posts/posts.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
