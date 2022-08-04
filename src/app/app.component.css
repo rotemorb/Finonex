@@ -1,20 +1,22 @@
 div {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+    width: 100vw;
+      height: 100vh;
 }
 
 #topMenu {
-  grid-column: span 2;
+  grid-column: 1/-1;
 }
 
 #mainContent {
   grid-row-start: 2;
   grid-column: 2/-1;
 }
+
 #leftMenu {
   grid-row-start: 2;
-  grid-column: span 1;
 }
 
 #bottomMenu {
