@@ -62,7 +62,8 @@
               "browserTarget": "Finonex:build:production"
             },
             "development": {
-              "browserTarget": "Finonex:build:development"
+              "browserTarget": "Finonex:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
