@@ -12,6 +12,7 @@ import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PostsComponent } from './posts/posts.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     GalleryComponent,
     ContactUsComponent,
     NotFoundComponent,
+    NavBarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],

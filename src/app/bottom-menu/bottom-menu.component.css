@@ -1,4 +1,4 @@
-div {
+:host {
   background-color: rgb(233, 217, 0);
   height: 50px;
 }
