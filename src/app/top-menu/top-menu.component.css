@@ -1,7 +1,14 @@
-div {
+:host {
   background-color: rgb(189, 97, 22);
   width: 100%;
   height: 50px;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+:host h4 {
+  margin-bottom: 0;
+  font-weight: 100;
+  margin-top: 0;
+  padding-top: 16px;
 }

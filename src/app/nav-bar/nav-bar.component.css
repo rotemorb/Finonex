@@ -1,6 +1,13 @@
+nav
+{
+  position: relative;
+}
+
 ul {
   list-style-type: none;
   padding-right: 1rem;
+  font-weight: bold;
+  padding: 0;
 }
 
 a {
@@ -8,11 +15,32 @@ a {
   color: #000;
 }
 
-:host-context(.left-menu) ul li {
-  margin-left: 1rem;
-  padding-bottom: 1rem;
+:host-context(.top-menu, .bottom-menu) nav {
+  margin-right: 2rem;
 }
+
+:host-context(.top-menu) span {
+    padding: 3px;
+}
+
+:host-context(.left-menu) ul {
+    position: absolute;
+    left: 1rem;
+    margin: 0;
+}
+
+:host-context(.left-menu) span {
+  display: none;
+}
+
+:host-context(.left-menu) ul li {
+
+}
+
 :host-context(.top-menu, .bottom-menu) ul li {
   display: inline;
-  margin-left: 1rem;
+}
+
+:host-context(.bottom-menu) span {
+  padding: 3px;
 }
