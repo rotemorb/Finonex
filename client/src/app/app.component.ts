@@ -1,27 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { AppServiceService } from './app-service.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Finonex';
-
-  constructor(private service: AppServiceService) {}
-  ngOnInit() {
-    this.getDataFromAPI();
-  }
-
-  getDataFromAPI() {
-    this.service.getPosts().subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
 }

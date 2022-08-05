@@ -1,10 +1,9 @@
 :host {
-  background-color: rgb(128, 128, 128);
+  background-color: #a5a5a5;
   height: 100vh;
 }
 
-:host h4
-{
+:host h4 {
   margin-left: 1rem;
   margin-bottom: 0;
   font-weight: 100;

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class AppServiceService {
+export class HomeServiceService {
   constructor(private http: HttpClient) {}
 
   rootURL = '/api';

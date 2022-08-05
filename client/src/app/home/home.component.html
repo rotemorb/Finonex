@@ -1,6 +1,12 @@
 <div class="home">
     <div class="posts">
-        Top 10 Posts
+        Top 10 posts
+        <br>
+        <ul>
+            <li *ngFor="let post of posts">
+                {{post['body']}}
+            </li>
+        </ul>
     </div>
     <div class="images">
         Top 10 Images

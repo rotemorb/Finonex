@@ -6,8 +6,18 @@ let getPosts = async () => {
   return response;
 };
 
+let getTopNPosts = async () => {
+  let response = await axios(`https://jsonplaceholder.typicode.com/posts`);
+  return response;
+};
+
 //controller function
 module.exports = async (req, res) => {
   let responseFact = await getPosts();
+  res.send(responseFact.data);
+};
+
+module.exports = async (req, res) => {
+  let responseFact = await getTopNPosts();
   res.send(responseFact.data);
 };
