@@ -11,4 +11,8 @@ export class HomeServiceService {
   getPosts() {
     return this.http.get(this.rootURL + '/posts');
   }
+
+  getPhotos() {
+    return this.http.get(this.rootURL + '/photos');
+  }
 }

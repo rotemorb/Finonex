@@ -1,23 +1,28 @@
-.home
-{
-    display: flex;
-    height: 100vh;
-    font-size: large;
+.home {
+  display: flex;
+  height: 100vh;
+  font-size: large;
 }
 
-.posts
-{
-    width:50%;
-    margin: 1rem 0.5rem 1rem 1rem;
-    background-color: rgb(55, 43, 217);
-    text-align: center;
-    padding-top: 0.5rem;
+.posts {
+  width: 50%;
+  margin: 1rem 0.5rem 1rem 1rem;
+  background-color: #4472c4;
+  text-align: center;
+  padding-top: 0.5rem;
+  overflow: auto;
 }
 
 .images {
-    width: 50%;
-    margin: 1rem 1rem 1rem 0.5rem;
-    background-color: rgb(55, 43, 217);
-    text-align: center;
-    padding-top:0.5rem;
+  width: 50%;
+  margin: 1rem 1rem 1rem 0.5rem;
+  background-color: #4472c4;
+  text-align: center;
+  padding-top: 0.5rem;
+  overflow: auto;
+}
+
+ul li {
+  list-style-type: none;
+  text-align: left;
 }

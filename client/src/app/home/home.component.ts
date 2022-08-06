@@ -12,15 +12,30 @@ export class HomeComponent implements OnInit {
   constructor(private service: HomeServiceService) {}
 
   posts = [];
+  photos = [];
 
   ngOnInit() {
-    this.getDataFromAPI();
+    this.getTopTenPosts();
+    this.getTopTenPhotos();
   }
 
-  getDataFromAPI() {
+  getTopTenPosts() {
     this.service.getPosts().subscribe(
       (response) => {
         this.posts = JSON.parse(JSON.stringify(response));
+        this.posts = this.posts.slice(0, 10);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  getTopTenPhotos() {
+    this.service.getPhotos().subscribe(
+      (response) => {
+        this.photos = JSON.parse(JSON.stringify(response));
+        this.photos = this.photos.slice(0, 10);
       },
       (error) => {
         console.log(error);
