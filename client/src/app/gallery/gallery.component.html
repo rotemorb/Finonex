@@ -1,1 +1,175 @@
-<div>gallery works!</div>
+<div>
+    <h4> Gallery Thumbnails</h4>
+    <div class="gallery">
+        <ng-container *ngIf="(singlePhoto.length == 0)">
+            <div *ngFor="let photo of photos">
+                <img id="{{photo['id']}}" src="{{photo['thumbnailUrl']}}" alt="{{photo['title']}}"
+                    (click)="getPhotoById(photo['id'])">
+            </div>
+        </ng-container>
+        <div *ngIf="(singlePhoto.length != 0)">
+            <img id="{{singlePhoto['id']}}" src="{{singlePhoto['thumbnailUrl']}}" alt="{{singlePhoto['title']}}">
+        </div>
+        <!-- In order to view an example of working photos, please switch the div with *ngFor, to the following divs -->
+        <!--         <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div>
+        <div>
+            <img src="https://vignette.wikia.nocookie.net/webbrowser/images/7/76/150px-Google_Chrome_2011_logo.png/revision/latest?cb=20110920061427"
+                alt="">
+        </div> -->
+    </div>
+</div>
