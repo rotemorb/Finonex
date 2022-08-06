@@ -1,4 +1,9 @@
 .gallery {
+  background-color: yellow;
+  height: 100vh;
+}
+
+.grid-container {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 15px;

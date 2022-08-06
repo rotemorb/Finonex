@@ -1,6 +1,6 @@
-<div>
+<div class="gallery">
     <h4> Gallery Thumbnails</h4>
-    <div class="gallery">
+    <div class="grid-container">
         <ng-container *ngIf="(singlePhoto.length == 0)">
             <div *ngFor="let photo of photos">
                 <img id="{{photo['id']}}" src="{{photo['thumbnailUrl']}}" alt="{{photo['title']}}"

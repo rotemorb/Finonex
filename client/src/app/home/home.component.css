@@ -6,6 +6,7 @@
   display: flex;
   height: 100vh;
   font-size: large;
+  background-color: #70ad47;
 }
 
 .posts {
