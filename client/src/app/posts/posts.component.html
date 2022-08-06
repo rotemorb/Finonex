@@ -1,1 +1,9 @@
-<div>posts works!</div>
+<div class="posts">
+    <h4>posts</h4>
+    <ul>
+        <li *ngFor="let post of posts">
+            {{post['id']}})
+            {{post['title']}}
+        </li>
+    </ul>
+</div>

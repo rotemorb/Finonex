@@ -1,0 +1,9 @@
+h4 {
+  margin: 0;
+  padding: 1rem;
+}
+
+ul li {
+  list-style-type: none;
+  text-align: left;
+}
