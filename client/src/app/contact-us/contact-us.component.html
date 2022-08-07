@@ -1,3 +1,34 @@
 <div class="contact-us">
-    d
+    <form [formGroup]="finonexForm" (ngSubmit)="onSubmit()">
+        <div class="inputs">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" formControlName="email" class="form-control">
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                    <div *ngIf="f['email'].errors['required']">email is required</div>
+                    <div *ngIf="f['email'].errors['email']">no such email address</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input id="fullname" type="text" formControlName="fullname"
+                    [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }">
+                <br>
+                <div *ngIf="submitted && f['fullname'].errors" class="invalid-feedback">
+                    <div *ngIf="f['fullname'].errors['required']">Fullname is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="text" formControlName="phone"
+                    [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }">
+                <div *ngIf="submitted && f['phone'].errors" class="invalid-feedback">
+                    <div *ngIf="f['phone'].errors['required']">phone is required</div>
+                    <div *ngIf="f['phone'].errors['pattern']">phone is not a valid Ukraine number</div>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <br>
 </div>

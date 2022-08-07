@@ -1,4 +1,47 @@
 .contact-us {
   background-color: #4472c4;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+label {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+input[type="submit"] {
+  align-self: flex-end;
+  cursor: pointer;
+  width: 6rem;
+  height: 2rem;
+  background: -webkit-linear-gradient(
+    to left,
+    #a0a0a0,
+    #959595
+  ); /* Chrome10+, Safari5.1+ */
+  background: -moz-linear-gradient(to left, #a0a0a0, #959595); /* FF3.6+ */
+  background: linear-gradient(to left, #a0a0a0, #959595);
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border: 1px solid red;
 }

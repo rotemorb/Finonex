@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,8 +29,16 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     NavBarComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [FormsModule, ReactiveFormsModule],
 })
 export class AppModule {}
